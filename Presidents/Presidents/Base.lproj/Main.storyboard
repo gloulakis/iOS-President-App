@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Bg8-7j-MbB">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Presidents-->
+        <scene sceneID="UFi-5n-RDm">
+            <objects>
+                <tableViewController id="925-cK-pQn" customClass="TableViewController" customModule="Presidents" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="insetGrouped" separatorStyle="default" rowHeight="50" estimatedRowHeight="-1" sectionHeaderHeight="20" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" id="McE-od-dUc">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="gray" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="mycellidentifier" textLabel="gr7-aY-5NE" detailTextLabel="hcd-Pd-jk1" imageView="Q4q-II-QfI" style="IBUITableViewCellStyleValue1" id="QvI-pB-WIh">
+                                <rect key="frame" x="20" y="55.333332061767578" width="353" height="50"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="QvI-pB-WIh" id="vB1-hD-DXC">
+                                    <rect key="frame" x="0.0" y="0.0" width="322.66666666666669" height="50"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="gr7-aY-5NE">
+                                            <rect key="frame" x="59" y="18" width="25" height="14.333333333333334"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="hcd-Pd-jk1">
+                                            <rect key="frame" x="282.00000000000006" y="18" width="32.666666666666664" height="14.333333333333334"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" image="rectangle.portrait.and.arrow.right" catalog="system" id="Q4q-II-QfI">
+                                            <rect key="frame" x="20.333333333333336" y="15" width="23.333333333333332" height="20"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </imageView>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="925-cK-pQn" id="Owo-R8-3mU"/>
+                            <outlet property="delegate" destination="925-cK-pQn" id="trf-Dd-XXa"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Presidents" largeTitleDisplayMode="always" id="EHi-mj-pdE"/>
+                    <connections>
+                        <outlet property="tableView" destination="McE-od-dUc" id="BjK-cJ-6qx"/>
+                        <segue destination="Nl9-Sf-8rY" kind="show" identifier="showPresidentsDetailsSegue" id="fEf-Rg-vkV"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pEs-M3-ypa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1065" y="-25"/>
+        </scene>
+        <!--Details View Controller-->
+        <scene sceneID="XaF-dc-f2i">
+            <objects>
+                <viewController id="Nl9-Sf-8rY" customClass="DetailsViewController" customModule="Presidents" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="NaA-T1-HSa">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hw6-g3-co1">
+                                <rect key="frame" x="175.66666666666666" y="150" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sEP-xi-D6M">
+                                <rect key="frame" x="164.33333333333334" y="744" width="64.333333333333343" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Done"/>
+                                <connections>
+                                    <action selector="doneButtonAction:" destination="Nl9-Sf-8rY" eventType="touchUpInside" id="om9-DM-FiX"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Xy-nO-eQa"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="sEP-xi-D6M" firstAttribute="centerX" secondItem="6Xy-nO-eQa" secondAttribute="centerX" id="F3h-jk-OXI"/>
+                            <constraint firstItem="Hw6-g3-co1" firstAttribute="top" secondItem="6Xy-nO-eQa" secondAttribute="top" constant="47" id="UIb-FX-stW"/>
+                            <constraint firstItem="6Xy-nO-eQa" firstAttribute="bottom" secondItem="sEP-xi-D6M" secondAttribute="bottom" constant="39" id="q1Q-FP-MyI"/>
+                            <constraint firstItem="Hw6-g3-co1" firstAttribute="centerX" secondItem="6Xy-nO-eQa" secondAttribute="centerX" id="zFs-O9-PGZ"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="wSK-TG-diN"/>
+                    <connections>
+                        <outlet property="doneButton" destination="sEP-xi-D6M" id="YdB-U4-E9M"/>
+                        <outlet property="presidentsName" destination="Hw6-g3-co1" id="UaJ-wA-AXd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="b2n-Nh-Spu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1899" y="-24"/>
+        </scene>
+        <!--Presidents-->
+        <scene sceneID="FTR-km-lvH">
+            <objects>
+                <navigationController autoresizesArchivedViewToFullSize="NO" title="Presidents" id="Bg8-7j-MbB" sceneMemberID="viewController">
+                    <size key="freeformSize" width="393" height="852"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="4nI-a0-76f">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="925-cK-pQn" kind="relationship" relationship="rootViewController" id="Y1q-F0-kEP"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9qi-fd-qat" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="185" y="-5"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="rectangle.portrait.and.arrow.right" catalog="system" width="128" height="109"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
